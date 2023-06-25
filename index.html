@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Optimization & Personalization</title>
     <style type="text/css">
-        *{
+        * {
             margin: 0px;
             padding: 0px;
             box-sizing: border-box;
         }
-        #mainContainer{
+
+        #mainContainer {
             height: 50vh;
 
             display: flex;
@@ -18,19 +20,62 @@
             justify-content: center;
             align-items: center;
         }
-        #mainContainer > button{
+
+        #mainContainer>button {
             margin-top: 10px;
             width: 100px;
             cursor: pointer;
         }
     </style>
+    <script type="text/javascript">
+        // Data layer
+        var digitalData = {};
+        digitalData.page = { pageInfo: {} };
+        digitalData.page.pageInfo.pageName = 'Optimization & Personalization';
+    </script>
+    <script>
+        // Prehiding snippet for Adobe Target with asynchronous tags deployment
+        ; (function (win, doc, style, timeout) {
+            var STYLE_ID = 'at-body-style';
+            function getParent() {
+                return doc.getElementsByTagName('head')[0];
+            }
+            function addStyle(parent, id, def) {
+                if (!parent) {
+                    return;
+                }
+                var style = doc.createElement('style');
+                style.id = id;
+                style.innerHTML = def;
+                parent.appendChild(style);
+            }
+            function removeStyle(parent, id) {
+                if (!parent) {
+                    return;
+                }
+                var style = doc.getElementById(id);
+                if (!style) {
+                    return;
+                }
+                parent.removeChild(style);
+            }
+            addStyle(getParent(), STYLE_ID, style);
+            setTimeout(function () {
+                removeStyle(getParent(), STYLE_ID);
+            }, timeout);
+        }(window, document, "body {opacity: 0 !important}", 3000));
+    </script>
+
     <!-- Adobe Launch script -->
-    <script src="https://assets.adobedtm.com/35066b6d6803/18a38587a437/launch-5cc187181828-development.min.js" async></script>
+    <script src="https://assets.adobedtm.com/35066b6d6803/18a38587a437/launch-5cc187181828-development.min.js"
+        async></script>
 </head>
+
 <body>
     <div id="mainContainer">
         <h2>Hey, grab this offer now!</h2>
         <button>20% OFF</button>
     </div>
 </body>
+
 </html>
